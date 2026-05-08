@@ -1,0 +1,10 @@
+# Build outputs
+cmake-build-**/
+build/
+bin/
+
+# CLion files
+.idea/
+
+# Visual Studio files
+.vs/
