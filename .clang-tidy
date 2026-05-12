@@ -1,0 +1,45 @@
+---
+Checks: >
+  -*,
+  bugprone-*,
+  performance-*,
+  readability-*,
+  modernize-*,
+  cppcoreguidelines-*,
+  clang-analyzer-*,
+  portability-*,
+
+  -cppcoreguidelines-avoid-magic-numbers,
+  -readability-identifier-length,
+  -cppcoreguidelines-owning-memory,
+  -modernize-use-trailing-return-type
+
+WarningsAsErrors: >
+  bugprone-*,
+  clang-analyzer-*
+
+HeaderFilterRegex: '.*'
+
+FormatStyle: file
+
+CheckOptions:
+  - key: readability-identifier-naming.ClassCase
+    value: PascalCase
+
+  - key: readability-identifier-naming.StructCase
+    value: PascalCase
+
+  - key: readability-identifier-naming.FunctionCase
+    value: PascalCase
+
+  - key: readability-identifier-naming.VariableCase
+    value: camelBack
+
+  - key: readability-identifier-naming.MemberSuffix
+    value: _
+
+  - key: readability-identifier-naming.PrivateMemberSuffix
+    value: _
+
+  - key: readability-identifier-naming.ConstantCase
+    value: UPPER_CASE

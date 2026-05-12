@@ -1,0 +1,42 @@
+---
+Language: Cpp
+
+BasedOnStyle: Microsoft
+
+Standard: c++20
+
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+
+ColumnLimit: 120
+
+BreakBeforeBraces: Allman
+
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortIfStatementsOnASingleLine: Never
+
+PointerAlignment: Left
+
+SortIncludes: true
+
+IncludeBlocks: Regroup
+
+NamespaceIndentation: All
+
+AccessModifierOffset: -4
+
+AlignConsecutiveAssignments: true
+AlignConsecutiveDeclarations: true
+
+SpaceBeforeParens: ControlStatements
+
+Cpp11BracedListStyle: true
+
+DerivePointerAlignment: false
+
+EmptyLineBeforeAccessModifier: LogicalBlock
+
+PackConstructorInitializers: NextLine
+
+ConstructorInitializerIndentWidth: 4
