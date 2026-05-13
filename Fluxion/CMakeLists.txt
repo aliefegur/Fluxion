@@ -6,7 +6,7 @@ project(Fluxion)
 find_package(glfw3 3.4 REQUIRED)
 
 add_library(${PROJECT_NAME})
-target_link_libraries(${PROJECT_NAME} PRIVATE glfw3)
+target_link_libraries(${PROJECT_NAME} PRIVATE glfw3 glad)
 target_include_directories(${PROJECT_NAME} PUBLIC ./)
 
 add_subdirectory(Fluxion)
