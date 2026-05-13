@@ -1,8 +1,14 @@
-#include <Hello.h>
+#include <Fluxion/Core/Window/Window.h>
+
+using namespace Fluxion;
 
 int main(int argc, char** argv)
 {
-    Hello hello;
-    hello.Greet();
-    return 0;
+    WindowSpecification windowSpec;
+    auto window = Window::Create(windowSpec);
+
+    while (!window->ShouldClose())
+    {
+        window->Update();
+    }
 }

@@ -2,5 +2,11 @@ cmake_minimum_required(VERSION 3.20)
 
 project(Fluxion)
 
-add_library(${PROJECT_NAME} src/Hello.h src/Hello.cpp)
-target_include_directories(${PROJECT_NAME} PUBLIC src)
+# Packages
+find_package(glfw3 3.4 REQUIRED)
+
+add_library(${PROJECT_NAME})
+target_link_libraries(${PROJECT_NAME} PRIVATE glfw3)
+target_include_directories(${PROJECT_NAME} PUBLIC ./)
+
+add_subdirectory(Fluxion)
