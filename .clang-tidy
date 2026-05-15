@@ -4,6 +4,7 @@ Checks: >
   bugprone-*,
   performance-*,
   readability-*,
+  readability-identifier-naming,
   modernize-*,
   cppcoreguidelines-*,
   clang-analyzer-*,
@@ -24,22 +25,43 @@ FormatStyle: file
 
 CheckOptions:
   - key: readability-identifier-naming.ClassCase
-    value: PascalCase
+    value: CamelCase
 
   - key: readability-identifier-naming.StructCase
-    value: PascalCase
+    value: CamelCase
 
   - key: readability-identifier-naming.FunctionCase
-    value: PascalCase
+    value: CamelCase
 
   - key: readability-identifier-naming.VariableCase
     value: camelBack
 
-  - key: readability-identifier-naming.MemberSuffix
-    value: _
+  # Public class members
+  - key: readability-identifier-naming.ClassMemberCase
+    value: CamelCase
 
-  - key: readability-identifier-naming.PrivateMemberSuffix
-    value: _
+  # Private class members
+  - key: readability-identifier-naming.PrivateMemberPrefix
+    value: m_
+
+  - key: readability-identifier-naming.PrivateMemberCase
+    value: CamelCase
+
+  # Static members
+  - key: readability-identifier-naming.ClassStaticMemberPrefix
+    value: s_
+
+  - key: readability-identifier-naming.ClassStaticMemberCase
+    value: CamelCase
+
+  # Struct members
+  - key: readability-identifier-naming.StructMemberCase
+    value: CamelCase
+  - key: readability-identifier-naming.PrivateStructMemberCase
+    value: CamelCase
 
   - key: readability-identifier-naming.ConstantCase
     value: UPPER_CASE
+
+  - key: readability-identifier-naming.StaticVariablePrefix
+    value: s_

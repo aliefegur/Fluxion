@@ -6,14 +6,13 @@ namespace Fluxion
 {
     struct WindowSpecification
     {
-        std::string Title = "Fluxion Window";
-
-        int Width = 1280;
-        int Height = 720;
-
-        bool VSync = true;
-        bool Resizable = true;
-        bool Maximized = false;
-        bool Decorated = true;
+        std::string Title = "Fluxion Engine";
+        int         Width;
+        int         Height;
+        bool        VSync      = true;
+        bool        FullScreen = false;
+        bool        Resizable  = true;
+        bool        Maximized  = false;
+        bool        Decorated  = true;
     };
-}
+} // namespace Fluxion

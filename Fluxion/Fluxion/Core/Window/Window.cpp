@@ -1,11 +1,16 @@
 #include "Window.h"
 
-#include "GLFWWindow.h"
+#include "Fluxion/Core/Window/WindowSpecification.h"
+#include "Fluxion/Platform/GLFW/GLFWWindow.h"
+
+#include <memory>
 
 namespace Fluxion
 {
-    std::unique_ptr<Window> Window::Create(const WindowSpecification& spec)
+    Window::Window(const WindowSpecification& specs) {}
+
+    std::unique_ptr<Window> Window::Create(const WindowSpecification& specs)
     {
-        return std::make_unique<GLFWWindow>(spec);
+        return std::make_unique<GLFWWindow>(specs);
     }
 } // namespace Fluxion
