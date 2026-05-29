@@ -1,25 +1,24 @@
 ---
 Checks: >
   -*,
+  clang-analyzer-*,
   bugprone-*,
   performance-*,
-  readability-*,
-  readability-identifier-naming,
-  modernize-*,
-  cppcoreguidelines-*,
-  clang-analyzer-*,
   portability-*,
 
-  -cppcoreguidelines-avoid-magic-numbers,
-  -readability-identifier-length,
-  -cppcoreguidelines-owning-memory,
-  -modernize-use-trailing-return-type
+  readability-identifier-naming,
+  modernize-use-nullptr,
+  modernize-use-override,
+  modernize-use-nodiscard,
+  modernize-use-default-member-init,
+
+  -bugprone-easily-swappable-parameters
 
 WarningsAsErrors: >
-  bugprone-*,
-  clang-analyzer-*
+  clang-analyzer-*,
+  bugprone-*
 
-HeaderFilterRegex: '.*'
+HeaderFilterRegex: '^(?!.*ThirdParty/).*'
 
 FormatStyle: file
 
@@ -50,9 +49,12 @@ CheckOptions:
   # Static members
   - key: readability-identifier-naming.ClassStaticMemberPrefix
     value: s_
-
   - key: readability-identifier-naming.ClassStaticMemberCase
     value: CamelCase
+  - key: readability-identifier-naming.StaticVariablePrefix
+    value: s_
+  - key: readability-identifier-naming.VariableIgnoredRegexp
+    value: '^s_.*'
 
   # Struct members
   - key: readability-identifier-naming.StructMemberCase
@@ -62,6 +64,3 @@ CheckOptions:
 
   - key: readability-identifier-naming.ConstantCase
     value: UPPER_CASE
-
-  - key: readability-identifier-naming.StaticVariablePrefix
-    value: s_
