@@ -6,11 +6,16 @@ project(Fluxion)
 find_package(glfw3 3.4 REQUIRED)
 
 add_library(${PROJECT_NAME}
-        Fluxion/Core/Log.h
         Fluxion/Core/Log.cpp
+        Fluxion/Core/Log.h
         Fluxion/Core/Window/WindowSpecification.h
+        Fluxion/Core/Window/Window.cpp
         Fluxion/Core/Window/Window.h
-        Fluxion/Core/Window/Window.cpp)
+        Fluxion/Core/Application.cpp
+        Fluxion/Core/Application.h
+        Fluxion/Core.h
+        Fluxion/Fluxion.h
+        Fluxion/Core/EntryPoint.h)
 target_link_libraries(${PROJECT_NAME} PRIVATE glfw3 glad)
 target_link_libraries(${PROJECT_NAME} PUBLIC spdlog::spdlog)
 target_include_directories(${PROJECT_NAME} PUBLIC ./)
