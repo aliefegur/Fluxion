@@ -1,3 +1,5 @@
+#pragma once
+
 #include "Fluxion/Core/Window/Window.h"
 #include "Fluxion/Core/Window/WindowSpecification.h"
 
