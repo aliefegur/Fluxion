@@ -1,5 +1,7 @@
 #include "GLFWWindow.h"
 
+#include "Fluxion/Core/Log.h"
+
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
@@ -16,8 +18,7 @@ namespace Fluxion
         {
             if (glfwInit() == GLFW_FALSE)
             {
-                // TODO: Use logging system
-                std::cerr << "Failed to initialize GLFW!" << std::endl;
+                FLX_CORE_ERROR("Failed to initialize GLFW!");
                 return;
             }
 
@@ -30,8 +31,7 @@ namespace Fluxion
         m_Window = glfwCreateWindow(specs.Width, specs.Height, specs.Title.c_str(), nullptr, nullptr);
         if (m_Window == nullptr)
         {
-            // TODO: Use logging system
-            std::cerr << "Failed to create GLFW Window!" << std::endl;
+            FLX_CORE_ERROR("Failed to create GLFW Window!");
             return;
         }
 
@@ -44,7 +44,7 @@ namespace Fluxion
         glfwMakeContextCurrent(m_Window);
         if (gladLoadGLLoader((GLADloadproc)glfwGetProcAddress) == GL_FALSE)
         {
-            std::cerr << "Failed to initialize OpenGL Context!" << std::endl;
+            FLX_CORE_ERROR("Failed to initialize OpenGL Context!");
         }
 
         m_Width  = specs.Width;
