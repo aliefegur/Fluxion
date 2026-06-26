@@ -12,5 +12,7 @@ set(CMAKE_CXX_CLANG_TIDY
 # Third-party libraries
 add_subdirectory(ThirdParty)
 
+find_package(spdlog 1.17 REQUIRED)
+
 add_subdirectory(Fluxion)
 add_subdirectory(Sandbox)
