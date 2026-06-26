@@ -4,6 +4,7 @@ project(Fluxion)
 
 # Packages
 find_package(glfw3 3.4 REQUIRED)
+find_package(spdlog 1.17 REQUIRED)
 
 add_library(${PROJECT_NAME}
         Fluxion/Core/Log.cpp

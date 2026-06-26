@@ -34,33 +34,39 @@ CheckOptions:
 
   - key: readability-identifier-naming.VariableCase
     value: camelBack
+  - key: readability-identifier-naming.VariableIgnoredRegexp
+    value: '^s_.*'
 
   # Public class members
   - key: readability-identifier-naming.ClassMemberCase
     value: CamelCase
+  - key: readability-identifier-naming.MemberIgnoredRegexp
+    value: '^s_.*'
 
   # Private class members
   - key: readability-identifier-naming.PrivateMemberPrefix
     value: m_
-
   - key: readability-identifier-naming.PrivateMemberCase
     value: CamelCase
+  - key: readability-identifier-naming.PrivateMemberIgnoredRegexp
+    value: '^s_.*'
 
   # Static members
-  - key: readability-identifier-naming.ClassStaticMemberPrefix
-    value: s_
-  - key: readability-identifier-naming.ClassStaticMemberCase
-    value: CamelCase
   - key: readability-identifier-naming.StaticVariablePrefix
     value: s_
-  - key: readability-identifier-naming.VariableIgnoredRegexp
-    value: '^s_.*'
+  - key: readability-identifier-naming.StaticVariableCase
+    value: CamelCase
+  - key: readability-identifier-naming.StaticConstexprVariablePrefix
+    value: s_
+  - key: readability-identifier-naming.StaticConstexprVariableCase
+    value: CamelCase
+  - key: readability-identifier-naming.StaticConstantPrefix
+    value: s_
+  - key: readability-identifier-naming.StaticConstantCase
+    value: CamelCase
 
   # Struct members
   - key: readability-identifier-naming.StructMemberCase
     value: CamelCase
   - key: readability-identifier-naming.PrivateStructMemberCase
     value: CamelCase
-
-  - key: readability-identifier-naming.ConstantCase
-    value: UPPER_CASE
