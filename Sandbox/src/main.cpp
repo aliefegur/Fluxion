@@ -5,12 +5,12 @@ class Sandbox : public Fluxion::Application
 public:
     Sandbox()
     {
-        FLX_LOG_INFO("Hello World!");
+        FLX_INFO("Hello World!");
     }
 
     ~Sandbox() override
     {
-        FLX_LOG_WARN("Goodbye World!");
+        FLX_WARN("Goodbye World!");
     }
 };
 

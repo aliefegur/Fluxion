@@ -9,7 +9,6 @@ Checks: >
   readability-identifier-naming,
   modernize-use-nullptr,
   modernize-use-override,
-  modernize-use-nodiscard,
   modernize-use-default-member-init,
 
   -bugprone-easily-swappable-parameters

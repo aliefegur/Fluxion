@@ -16,7 +16,11 @@ add_library(${PROJECT_NAME}
         Fluxion/Core/Application.h
         Fluxion/Core.h
         Fluxion/Fluxion.h
-        Fluxion/Core/EntryPoint.h)
+        Fluxion/Core/EntryPoint.h
+        Fluxion/Core/Events/Event.h
+        Fluxion/Core/Events/ApplicationEvent.h
+        Fluxion/Core/Events/KeyEvent.h
+        Fluxion/Core/Events/MouseEvent.h)
 target_link_libraries(${PROJECT_NAME} PRIVATE glfw3 glad)
 target_link_libraries(${PROJECT_NAME} PUBLIC spdlog::spdlog)
 target_include_directories(${PROJECT_NAME} PUBLIC ./)
